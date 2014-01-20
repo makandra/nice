@@ -1,0 +1,18 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.0.1'
+gem 'sqlite3' # Use sqlite3 as the database for Active Record
+gem 'jquery-rails' # Use jquery as the JavaScript library
+gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
+gem 'compass-rails' # Standard library for Sass (stylesheet) mixins
+
+# Gems used only for assets and not required in production environments by default.
+group :assets do
+  gem 'therubyracer' # Javascript VM for asset pipeline
+  gem 'uglifier', '>= 1.3.0' # Compressor for Javascript assets
+end
+
+group :development do
+  gem 'debugger' # type "debugger" anywhere in your code and the server console will open an IRB session there
+  gem 'quiet_assets' # less verbose log output
+end
