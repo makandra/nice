@@ -30,7 +30,7 @@ $COLOR_ERROR: $COLOR_ALIZARIN;
 
 body {
   color: white;
-  background-color: $COLOR_GREEN_SEA;
+  background-color: $COLOR_WET_ASPHALT;
 }
 
 body, input, button, textarea, select {
@@ -128,9 +128,9 @@ form {
     padding: 10px;
     border: 0;
     color: white;
-    background-color: $COLOR_EMERALD;
+    background-color: $COLOR_PETER_RIVER;
     &:hover {
-      background-color: $COLOR_EMERALD + 15;
+      background-color: $COLOR_PETER_RIVER + 15;
     }
   }
 

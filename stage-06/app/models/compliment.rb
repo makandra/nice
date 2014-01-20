@@ -3,6 +3,8 @@ class Compliment < ActiveRecord::Base
   validates_presence_of :message
   validates_uniqueness_of :message
 
+  class_attribute :random_generator
+
   has_many :ratings
 
   def rate(stars)
@@ -18,7 +20,7 @@ class Compliment < ActiveRecord::Base
   end
 
   def self.random
-    Compliment.all.sample or create_default_compliments
+    Compliment.all.sample(random: random_generator) or create_default_compliments
   end
 
   def self.create_default_compliments

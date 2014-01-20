@@ -20,4 +20,8 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner' # wipes the test database between Cucumber scenarios
+  gem 'selenium-webdriver' # for Javascript-enabled integration tests
+  gem 'spreewald' # common step definitions for Cucumber
 end
