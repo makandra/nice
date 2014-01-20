@@ -1,0 +1,24 @@
+<div class="compliment">
+  <%= @compliment.message %>
+</div>
+
+<div class="rating">
+
+  <%= link_to '☆☆☆☆☆', rate_compliment_path(@compliment, :stars => 0), method: 'post' %>
+  <%= link_to '★☆☆☆☆', rate_compliment_path(@compliment, :stars => 1), method: 'post' %>
+  <%= link_to '★★☆☆☆', rate_compliment_path(@compliment, :stars => 2), method: 'post' %>
+  <%= link_to '★★★☆☆', rate_compliment_path(@compliment, :stars => 3), method: 'post' %>
+  <%= link_to '★★★★☆', rate_compliment_path(@compliment, :stars => 4), method: 'post' %>
+  <%= link_to '★★★★★', rate_compliment_path(@compliment, :stars => 5), method: 'post' %>
+
+  <span class="average">
+    <%= @compliment.average_stars %>
+  </span>
+
+</div>
+
+<div class="actions">
+  <a href="https://www.google.com/">Thanks! I feel better.</a>
+  <a href="/compliments/random">I still feel crappy.</a>
+  <a href="/compliments/new">Add a compliment</a>
+</div>
