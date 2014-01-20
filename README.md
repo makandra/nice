@@ -1,6 +1,9 @@
 You Look Nice Today
 ===================
 
+A sample application for our Rails workshop
+-------------------------------------------
+
 This is the demo application for our [Rails Workshop](http://railsworkshop.makandra.de), a yearly event
 held by [makandra](http://www.makandra.com/) to tell students about
 the [Ruby on Rails](http://rubyonrails.org/) framework and test-driven development.
@@ -9,10 +12,10 @@ The application was inspired by the wonderful [emergency compliment](http://emer
 You should make that website your homepage and buy [all their prints](http://society6.com/emergencycompliment).
 
 
-How to use this repository
---------------------------
+How to explore this repository
+------------------------------
 
-This repository contains the same application multiple times, in different stages of development.
+This repository contains the **same application multiple times**, in different stages of development.
 As we move along the stages, we add more and more functionality.
 
 [stage-01: Hello world](stage-01)
