@@ -1,0 +1,73 @@
+@import 'compass/reset';
+
+$COLOR_TURQUOISE: #1ABC9C;
+$COLOR_GREEN_SEA: #16A085;
+$COLOR_EMERALD: #2ECC71;
+$COLOR_NEPHRITIS: #27AE60;
+$COLOR_PETER_RIVER: #3498DB;
+$COLOR_BELIZE_HOLE: #2980B9;
+$COLOR_AMETHYST: #9B59B6;
+$COLOR_WISTERIA: #8E44AD;
+$COLOR_WET_ASPHALT: #34495E;
+$COLOR_MIDNIGHT_BLUE: #2C3E50;
+$COLOR_SUN_FLOWER: #F1C40F;
+$COLOR_ORANGE: #F39C12;
+$COLOR_CARROT: #E67E22;
+$COLOR_PUMPKIN: #D35400;
+$COLOR_ALIZARIN: #E74C3C;
+$COLOR_POMEGRANATE: #C0392B;
+$COLOR_CLOUDS: #ECF0F1;
+$COLOR_SILVER: #BDC3C7;
+$COLOR_CONCRETE: #95A5A6;
+$COLOR_ASBESTOS: #7F8C8D;
+
+@mixin font-size($size, $padding: 2) {
+  font-size: $size;
+  line-height: $size + (2 * $padding);
+}
+
+body {
+  font-family: OpenSans;
+  font-weight: 300;
+  @include font-size(30px);
+  color: white;
+  background-color: $COLOR_BELIZE_HOLE;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+//    background-color: $COLOR_POMEGRANATE;
+//    color: $COLOR_SUN_FLOWER;
+    text-decoration: underline;
+  }
+}
+
+.screen {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.head {
+  margin: 20px 0;
+  a {
+    color: rgba(255,255,255,0.7);
+  }
+}
+
+
+.compliment {
+  @include font-size(60px);
+  font-weight: 600;
+  max-width: 600px;
+  margin: 50px 0;
+}
+
+.actions {
+  margin: 20px 0;
+  a {
+    display: block;
+    margin: 10px 0;
+  }
+}

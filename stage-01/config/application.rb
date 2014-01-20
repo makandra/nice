@@ -19,5 +19,9 @@ module Nice
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # Allow to organize vendor assets in /vendor/asset-libs
+    # See https://makandracards.com/makandra/8951-rails-asset-pipeline-how-to-organize-stylesheets-in-sub-folders
+    config.assets.paths += Dir["#{Rails.root}/vendor/asset-libs/*"].sort_by { |dir| -dir.size }
   end
 end
