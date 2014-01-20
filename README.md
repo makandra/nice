@@ -45,9 +45,9 @@ How to run the example applications
 
 3. You can now `cd` into each stage folder, install dependencies and start a Rails server:
 
-       cd stage-01
-       bundle
-       rails server
+        cd stage-01
+        bundle
+        rails server
 
 4. You can now access the application under <http://localhost:3000>.
 
