@@ -1,7 +1,6 @@
 log/*
 tmp/*
 storage/*
-db/*.sqlite3
 db/schema.rb
 db/structure.sql
 public/system
