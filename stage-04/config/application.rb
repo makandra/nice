@@ -26,5 +26,7 @@ module Nice
 
     # Don't require to whitelist parameters for the sake of easier code examples.
     config.action_controller.permit_all_parameters = true
+
+    config.i18n.enforce_available_locales = true
   end
 end

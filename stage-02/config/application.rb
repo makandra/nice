@@ -23,5 +23,7 @@ module Nice
     # Allow to organize vendor assets in /vendor/asset-libs
     # See https://makandracards.com/makandra/8951-rails-asset-pipeline-how-to-organize-stylesheets-in-sub-folders
     config.assets.paths += Dir["#{Rails.root}/vendor/asset-libs/*"].sort_by { |dir| -dir.size }
+
+    config.i18n.enforce_available_locales = true
   end
 end

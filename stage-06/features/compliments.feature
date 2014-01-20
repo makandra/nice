@@ -1,5 +1,6 @@
 Feature: Compliments
 
+  @javascript @slow
   Scenario: User draws random compliments until she feels better
     Given my random generator is predictable
     When I go to a random compliment
@@ -9,6 +10,7 @@ Feature: Compliments
     When I follow "I still feel crappy"
     Then I should see "You pick the best radio stations when you're riding shotgun"
 
+  @javascript @slow
   Scenario: User submits a new compliment
     When I go to a random compliment
     And I follow "Add a compliment"
