@@ -15,6 +15,8 @@ You should make that website your homepage and buy [all their prints](http://soc
 How to explore this repository
 ------------------------------
 
+Foo
+
 This repository contains the **same application multiple times**, in different stages of development.
 As we move along the stages, we add more and more functionality.
 
