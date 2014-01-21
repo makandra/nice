@@ -30,7 +30,7 @@ $COLOR_ERROR: $COLOR_ALIZARIN;
 
 body {
   color: white;
-  background-color: $COLOR_WET_ASPHALT;
+  background-color: $COLOR_MIDNIGHT_BLUE + 25;
 }
 
 body, input, button, textarea, select {
@@ -44,6 +44,9 @@ a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+  }
+  &:active {
+    text-shadow: 0 0 15px #fff, 0 0 30px #fff;
   }
 }
 
@@ -119,6 +122,9 @@ form {
     @include box-sizing(border-box);
     padding: 10px;
     border: 0;
+    &:focus {
+      @include box-shadow(0 0 40px rgba(255, 255, 255, 0.6))
+    }
   }
 
   input[type=submit] {
@@ -131,6 +137,9 @@ form {
     background-color: $COLOR_PETER_RIVER;
     &:hover {
       background-color: $COLOR_PETER_RIVER + 15;
+    }
+    &:active {
+      @include box-shadow(0 0 40px rgba(255, 255, 255, 0.4))
     }
   }
 

@@ -45,6 +45,9 @@ a {
   &:hover {
     text-decoration: underline;
   }
+  &:active {
+    text-shadow: 0 0 15px #fff, 0 0 30px #fff;
+  }
 }
 
 .screen {
@@ -94,6 +97,9 @@ form {
     @include box-sizing(border-box);
     padding: 10px;
     border: 0;
+    &:focus {
+      @include box-shadow(0 0 40px rgba(255, 255, 255, 0.6))
+    }
   }
 
   input[type=submit] {
@@ -106,6 +112,9 @@ form {
     background-color: $COLOR_PETER_RIVER;
     &:hover {
       background-color: $COLOR_PETER_RIVER + 15;
+    }
+    &:active {
+      @include box-shadow(0 0 40px rgba(255, 255, 255, 0.4))
     }
   }
 
