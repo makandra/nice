@@ -17,6 +17,8 @@ How to explore this repository
 
 Foo
 
+<stage-01/app/controllers/compliments_controller.rb>
+
 This repository contains the **same application multiple times**, in different stages of development.
 As we move along the stages, we add more and more functionality.
 
