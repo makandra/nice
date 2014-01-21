@@ -1,15 +1,14 @@
 You Look Nice Today
 ===================
 
-A sample application for our Rails workshop
--------------------------------------------
-
 This is the demo application for our [Rails Workshop](http://railsworkshop.makandra.de), a yearly event
 held by [makandra](http://www.makandra.com/) to tell students about
 the [Ruby on Rails](http://rubyonrails.org/) framework and test-driven development.
 
 The application was inspired by the wonderful [emergency compliment](http://emergencycompliment.com/) service.
 You should make that website your homepage and buy [all their prints](http://society6.com/emergencycompliment).
+
+![Screenshot of You Look Nice Today](screenshot.png)
 
 
 How to explore this repository
