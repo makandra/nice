@@ -24,6 +24,8 @@ As we move along the stages, we add more and more functionality.
 [stage-02: Model / View / Controller interaction](stage-02)
 : Moves controller code into a Ruby model `Compliment`
 
+<stage-02/app/controllers/compliments_controller.rb>
+
 [stage-03: Database access with ActiveRecord](stage-03)
 : Moves compliments into the database.
 
