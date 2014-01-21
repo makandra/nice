@@ -21,11 +21,11 @@ As we move along the stages, we add more and more functionality.
 ### [stage-01: Hello world](stage-01)
 This stage shows a very simple Rails application with a single route, a single controller and no model.
 
-### Noteworthy files:
+#### Noteworthy files:
 
-[routes.rb](stage-01/config/routes.rb)
+[`routes.rb`](stage-01/config/routes.rb)
 : Our routes setup file. This maps incoming browser requests to controller actions.
-[compliments_controller.rb](stage-01/app/controllers/compliments_controller.rb)
+[`compliments_controller.rb`](stage-01/app/controllers/compliments_controller.rb)
 : Our one and only controller. It fetches a compliment and puts it into an instance variable `@compliment`.
 
 
