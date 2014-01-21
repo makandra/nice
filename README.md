@@ -18,8 +18,17 @@ How to explore this repository
 This repository contains the **same application multiple times**, in different stages of development.
 As we move along the stages, we add more and more functionality.
 
-[stage-01: Hello world](stage-01)
-: A single route, a single controller, no model.
+### [stage-01: Hello world](stage-01)
+This stage shows a very simple Rails application with a single route, a single controller and no model.
+
+### Noteworthy files:
+
+[routes.rb](stage-01/config/routes.rb)
+: Our routes setup file. This maps incoming browser requests to controller actions.
+[compliments_controller.rb](stage-01/app/controllers/compliments_controller.rb)
+: Our one and only controller. It fetches a compliment and puts it into an instance variable `@compliment`.
+
+
 
 [stage-02: Model / View / Controller interaction](stage-02)
 : Moves controller code into a Ruby model `Compliment`
