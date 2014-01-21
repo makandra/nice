@@ -130,7 +130,7 @@ For this we introduce a `Rating` model. A compliment can have many ratings.
   URL to find the requested compliment in the database, then to store the requested `stars` value.
   After it is done, it renders the compliment again.
   
-[`compliment.html.erb`](stage-04/app/views/compliments/compliment.html.erb)
+[`compliment.html.erb`](stage-05/app/views/compliments/compliment.html.erb)
 : We have renamed `random.html.erb` to `compliment.html.erb` because we now render
   it from controller actions other than `#random`. Also it now contains links to
   rate the shown compliment on a scale from zero to five stars. Note how we are using the `link_to` and
@@ -161,6 +161,9 @@ you can run those tests by using these commands from the project directory (`sta
   
 [`compliment_steps.rb`](stage-06/features/step_definitions/compliment_steps.rb)
 : Step definitions like that map the natural language from `compliments.feature` to Ruby code.
+
+
+##### More about tests:
   
 For further material on tests check out our [crash course (German)](http://www.makandra.de/malennachzahlen/kurs/) and [TDD talk (English)](http://tdd.talks.makandra.com/).
 
