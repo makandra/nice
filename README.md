@@ -24,7 +24,7 @@ Below you can find a list of the various stages, with links to the most importan
 
 This stage shows a very simple Rails application with a single route, a single controller and no model.
 
-#### Noteworthy files:
+##### Noteworthy files:
 
 [`routes.rb`](stage-01/config/routes.rb)
 : Our routes setup file. This maps incoming browser requests to controller actions.
