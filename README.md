@@ -29,7 +29,7 @@ This stage shows a very simple Rails application with a single route, a single c
 
 Our routes setup file. This maps incoming browser requests to controller actions.
 
-```
+```ruby
 Nice::Application.routes.draw do
 
   get 'compliments/random' => 'compliments#random'
