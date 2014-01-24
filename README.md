@@ -29,7 +29,7 @@ This stage shows a very simple Rails application with a single route, a single c
 
 Our routes setup file. This maps incoming browser requests to controller actions.
 
-```
+```ruby
 Nice::Application.routes.draw do
 
   get 'compliments/random' => 'compliments#random'
@@ -41,7 +41,7 @@ end
 
 Our one and only controller. It fetches a compliment and puts it into an instance variable `@compliment`.
 
-```
+```ruby
 class ComplimentsController < ApplicationController
 
   def random
@@ -62,7 +62,7 @@ end
 
 Our one and only view. It takes the `@compliment` variable that was prepared by the controller and renders it on a HTML page.
 
-```
+```html
 <div class="compliment">
   <%= @compliment %>
 </div>
@@ -85,7 +85,7 @@ To do that the code that was previously found in `ComplimentsController` is move
 
 This model takes over the job of drawing a random compliment.
 
-```
+```ruby
 class Compliment
 
   AVAILABLE_MESSAGES = [
@@ -117,7 +117,7 @@ end
 
 Now that the model does most of the work, our controller becomes very short. That's the way it should be!
 
-```
+```ruby
 class ComplimentsController < ApplicationController
 
   def random
@@ -132,7 +132,7 @@ end
 
 Our view no longer displays `@compliment` (which used to be a string in stage-01), but `@compliment.message`. `message` is a string attribute of our `Compliment` model.
 
-```
+```html
 <div class="compliment">
   <%= @compliment.message %>
 </div>
@@ -158,7 +158,7 @@ A short database migration script that creates the `compliments` table and its c
 This script is part of the project, so other developers, production servers, etc. automatically
 receive our database changes together with our other code changes.
 
-```
+```ruby
 class CreateCompliment < ActiveRecord::Migration
 
   def change
@@ -178,7 +178,7 @@ Our model now inherits from `ActiveRecord::Base` and automatically becomes persi
 in the database (without any further code). We also added some code to populate
 the database with default-compliments.
 
-```
+```ruby
 class Compliment < ActiveRecord::Base
 
   def self.random
@@ -210,7 +210,7 @@ in the database (which we prepared in `stage-03`).
 
 Our model now *validates* that compliments have a message, and that we do not have duplicate messages (uniqueness).
 
-```
+```ruby
 class Compliment < ActiveRecord::Base
 
   validates_presence_of :message
@@ -237,7 +237,7 @@ end
 We map two additional routes to two new controller actions: One to display the "New compliment" form,
 one to process the form submisssion (and create the new `Compliment`).
 
-```
+```ruby
 Nice::Application.routes.draw do
 
   get 'compliments/random' => 'compliments#random'
@@ -255,7 +255,7 @@ Our controller gains two new actions. `#new` simply displays the "New compliment
 `#create` processes the form submission, validates the request and creates a new `Compliment`
 if it passes validations.
 
-```
+```ruby
 class ComplimentsController < ApplicationController
 
   def random
@@ -283,7 +283,7 @@ end
 
 The view which renders the "New compliment" form as HTML.
 
-```
+```html
 <h1>New compliment</h1>
 
 <%= form_for @compliment, url: '/compliments/create' do |form| %>
@@ -304,7 +304,7 @@ The view which renders the "New compliment" form as HTML.
 
 The "thank you" page we render after a compliment was successfully created.
 
-```
+```html
 <h1>Thank you!</h1>
 
 <p>
@@ -329,7 +329,7 @@ For this we introduce a `Rating` model. A compliment can have many ratings.
 The database migration script to create our new `ratings` table and its columns.
 Note how it uses a foreign key `compliment_id` to reference its associated compliment.
 
-```
+```ruby
 class CreateRating < ActiveRecord::Migration
 
   def change
@@ -354,7 +354,7 @@ end
 We now have a second model `Rating`. It also has some validations.
 It is linked to the `Compliment` model by saying `belongs_to :compliment`.
 
-```
+```ruby
 class Rating < ActiveRecord::Base
 
   belongs_to :compliment
@@ -371,7 +371,7 @@ end
 Our `Compliment` model is now linked to the `Ratings` model by saying `has_many :ratings`.
 It also gained methods to rate a method and to compute its average rating.
 
-```
+```ruby
 class Compliment < ActiveRecord::Base
 
   validates_presence_of :message
@@ -412,7 +412,7 @@ end
 We added a more complex route to the controller endpoint that stores a new rating.
 Note how it has an `:id` variable and a name `rate_compliment_path`.
 
-```
+```ruby
 Nice::Application.routes.draw do
 
   get 'compliments/random' => 'compliments#random'
@@ -432,7 +432,7 @@ Our controller gains a new action `rate` to save a new rating. Note how it proce
 URL to find the requested compliment in the database, then to store the requested `stars` value.
 After it is done, it renders the compliment again.
 
-```
+```ruby
 class ComplimentsController < ApplicationController
 
   def random
@@ -470,7 +470,7 @@ it from controller actions other than `#random`. Also it now contains links to
 rate the shown compliment on a scale from zero to five stars. Note how we are using the
 `link_to` and `rate_compliment_path` helpers to render a complicated HTML link.
 
-```
+```html
 <div class="compliment">
   <%= @compliment.message %>
 </div>
@@ -515,7 +515,7 @@ you can run those tests by using these commands from the project directory (`sta
 
 A unit test that verifies that the `Compliment` model correctly stores and averages user ratings.
 
-```
+```ruby
 require 'spec_helper'
 
 describe Compliment do
@@ -550,7 +550,7 @@ end
 A full-stack integration test that verifies our user interface by *actually using it* with a scripted
 Firefox browser. Even though that test reads like natural language, it is executable code.
 
-```
+```cucumber
 Feature: Compliments
 
   Scenario: User draws random compliments until she feels better
@@ -578,7 +578,7 @@ Feature: Compliments
 
 Step definitions like that map the natural language from `compliments.feature` to Ruby code.
 
-```
+```ruby
 Given /^my random generator is predictable$/ do
   # Initialize the random generator with a fixed seed.
   # This way we will get a predictable series of random values
