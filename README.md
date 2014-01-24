@@ -175,7 +175,7 @@ end
 ##### [`app/models/compliment.rb`](stage-03/app/models/compliment.rb)
 
 Our model now inherits from `ActiveRecord::Base` and automatically becomes persistent
-in the database without any further code. We also added some code to populate
+in the database (without any further code). We also added some code to populate
 the database with default-compliments.
 
 ```
