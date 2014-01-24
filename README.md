@@ -48,7 +48,7 @@ class ComplimentsController < ApplicationController
     available_compliments = [
       "Your parents are more proud of you than you'll ever know.",
       "You actually looked super graceful that time you tripped in front of everyone.",
-      "People at trivia night are terrified of you.",
+      "People at trivia night are terrified by you.",
       "You pick the best radio stations when you're riding shotgun.",
       "Your pet loves you too much to ever run away."
     ]
@@ -91,7 +91,7 @@ class Compliment
   AVAILABLE_MESSAGES = [
     "Your parents are more proud of you than you'll ever know.",
     "You actually looked super graceful that time you tripped in front of everyone.",
-    "People at trivia night are terrified of you.",
+    "People at trivia night are terrified by you.",
     "You pick the best radio stations when you're riding shotgun.",
     "Your pet loves you too much to ever run away."
   ]
@@ -188,7 +188,7 @@ class Compliment < ActiveRecord::Base
   def self.create_default_compliments
     Compliment.create!(message: "Your parents are more proud of you than you'll ever know.")
     Compliment.create!(message: "You actually looked super graceful that time you tripped in front of everyone.")
-    Compliment.create!(message: "People at trivia night are terrified of you.")
+    Compliment.create!(message: "People at trivia night are terrified by you.")
     Compliment.create!(message: "You pick the best radio stations when you're riding shotgun.")
     Compliment.create!(message: "Your pet loves you too much to ever run away.")
   end
@@ -223,7 +223,7 @@ class Compliment < ActiveRecord::Base
   def self.create_default_compliments
     Compliment.create!(message: "Your parents are more proud of you than you'll ever know.")
     Compliment.create!(message: "You actually looked super graceful that time you tripped in front of everyone.")
-    Compliment.create!(message: "People at trivia night are terrified of you.")
+    Compliment.create!(message: "People at trivia night are terrified by you.")
     Compliment.create!(message: "You pick the best radio stations when you're riding shotgun.")
     Compliment.create!(message: "Your pet loves you too much to ever run away.")
   end
@@ -398,7 +398,7 @@ class Compliment < ActiveRecord::Base
   def self.create_default_compliments
     Compliment.create!(message: "Your parents are more proud of you than you'll ever know.")
     Compliment.create!(message: "You actually looked super graceful that time you tripped in front of everyone.")
-    Compliment.create!(message: "People at trivia night are terrified of you.")
+    Compliment.create!(message: "People at trivia night are terrified by you.")
     Compliment.create!(message: "You pick the best radio stations when you're riding shotgun.")
     Compliment.create!(message: "Your pet loves you too much to ever run away.")
   end
@@ -558,7 +558,7 @@ Feature: Compliments
     When I go to a random compliment
     Then I should see "Your pet loves you too much to ever run away"
     When I follow "I still feel crappy"
-    Then I should see "People at trivia night are terrified of you"
+    Then I should see "People at trivia night are terrified by you"
     When I follow "I still feel crappy"
     Then I should see "You pick the best radio stations when you're riding shotgun"
 

@@ -6,7 +6,7 @@ Feature: Compliments
     When I go to a random compliment
     Then I should see "Your pet loves you too much to ever run away"
     When I follow "I still feel crappy"
-    Then I should see "People at trivia night are terrified of you"
+    Then I should see "People at trivia night are terrified by you"
     When I follow "I still feel crappy"
     Then I should see "You pick the best radio stations when you're riding shotgun"
 

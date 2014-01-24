@@ -6,10 +6,13 @@ class ComplimentsController < ApplicationController
 
   def new
     @compliment = Compliment.new
+    render 'new'
   end
 
   def create
-    @compliment = Compliment.new(params[:compliment])
+    @compliment = Compliment.new
+    @compliment.message = params['compliment']['message']
+
     if @compliment.save
       render 'created'
     else

@@ -8,9 +8,6 @@ class CreateRating < ActiveRecord::Migration
       t.timestamps
     end
 
-    # Always add a database index for foreign keys to improve lookup speed.
-    add_index :ratings, :compliment_id
-
   end
 
 end
